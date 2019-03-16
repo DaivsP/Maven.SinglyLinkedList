@@ -21,4 +21,21 @@ public class SinglyLinkedListTest {
 
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void removeTest(){
+        SinglyLinkedList singlyLinkedList = new SinglyLinkedList();
+
+        String hey = "hey";
+        String hi = "hi";
+
+        singlyLinkedList.add(hey);
+        singlyLinkedList.add(hi);
+
+        singlyLinkedList.remove(2);
+
+        Boolean actual = singlyLinkedList.contains("hi");
+
+        Assert.assertFalse(actual);
+    }
 }
